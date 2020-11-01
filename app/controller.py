@@ -18,9 +18,13 @@ def game_played():
     players_choice1 = request.form["choice1"]
     players_name2 = request.form["name2"]
     players_choice2 = request.form["choice2"]
+    player1 = Player(name=players_name1, choice=players_choice1)
+    player2 = Player(name=players_name2, choice=players_choice2)
+    winnner = [player1, player2]
 
-    return f"{players_name1}  Played {players_choice1}  {players_name2} Played {players_choice2}"
-    return f""
+    
+    return f"{players_name1}:  Played  -  {players_choice1}  {players_name2}: Played  -  {players_choice2}"
+    
 
 
 # @app.route("/add-player", methods=["POST"])
